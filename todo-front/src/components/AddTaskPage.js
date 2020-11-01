@@ -5,7 +5,6 @@ import { startAddTask } from '../actions/tasks';
 
 export const AddTaskPage = (props) => {
 	const onSubmit = (task) => {
-        console.log({...task, user_id: props.user._id});
 		props.startAddTask({...task, user_id: props.user._id});
 		props.history.push(`/userTasks/${props.user._id}`);
 	};
