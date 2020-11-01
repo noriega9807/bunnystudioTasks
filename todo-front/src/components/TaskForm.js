@@ -41,24 +41,32 @@ export const TaskForm = (props) => {
                 }
             />
             <div>
+                <div>
                 <input 
+                    id="todo"
                     type="radio" 
                     value="to do" 
                     name="status" 
                     checked={taskStatus === "to do"}
+                    className="radio-input"
                     onChange={(e) => 
                         setTaskStatus(e.target.value)
                     }
-                /> To do
+                /> <label for="todo">to do</label>
+                </div>
+                <div>
                 <input 
+                    id="done"
                     type="radio" 
                     value="done" 
                     name="status" 
                     checked={taskStatus === "done"}
+                    className="radio-input"
                     onChange={(e) => 
                         setTaskStatus(e.target.value)
                     }
-                /> Done
+                /> <label for="done">done</label>
+                </div>
             </div>
 
             <div>

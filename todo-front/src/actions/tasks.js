@@ -22,10 +22,8 @@ export const startAddTask = (taskData = {}) => {
 		user_id = 0
 		} = taskData;
 		const task = { description, state, user_id };
-		console.log(task);
 		try {
 			const response = await axios.post('/tasks', task, axiosConfig);
-			console.log(response.data);
 			dispatch(addTask({
 				_id: response.data._id,
 				...task
@@ -45,7 +43,6 @@ export const removeTask = ({ id } = {}) => ({
 export const startRemoveTask = ({ id } = {}) => {
 	return async (dispatch) => {
 		try {
-			console.log(id);
 			await axios.delete(`/tasks/${id}`, axiosConfig);
 			dispatch(removeTask({ id }));
 		}catch(e){
