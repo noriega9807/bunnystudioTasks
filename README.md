@@ -1,5 +1,7 @@
 # Bunny Studio Task Test
 
+The live server is running on Microsoft Azure on: http://bunnystudio.centralus.cloudapp.azure.com:3002
+
 # Run API server
 The first thing to do is to set up your mongodb database, to set it up run on yout terminal:
 ```sh
@@ -28,6 +30,13 @@ $ npm install
 $ npm run watch
 ```
 Then in your browser go to http://localhost:3002/
+
+# Diagram
+
+This is what I have in my code:
+![micro service diagram](bunny-studio.jpeg)
+This is what I would have liked to do:
+![micro service diagram](bunny-studio-ideal.jpeg)
 
 # ToDo
 Some things that are missing due to running out of time are:
